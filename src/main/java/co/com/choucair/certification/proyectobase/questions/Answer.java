@@ -6,22 +6,21 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
 public class Answer implements Question<Boolean> {
-    private String question;
+    private String strcourse;
 
-    public Answer(String question) {
-        this.question = question;
+    public Answer(String strcourse) {
+        this.strcourse = strcourse;
     }
 
-    public static Answer toThe(String question) {
-        return new Answer(question);
+    public static Answer toThe(String strcourse) {
+        return new Answer(strcourse);
 
     }
-
     @Override
     public Boolean answeredBy(Actor actor) {
       boolean result;
       String nameCourse= Text.of(SearchCoursePage.QUESTION).viewedBy(actor).asString();
-      if(question.equals(nameCourse)){
+      if(strcourse.equals(nameCourse)){
           result =true;
 
       }else{

@@ -11,9 +11,10 @@ public class OpenUp implements Task {
     private ChoucairAcademyPage choucairAcademyPage;
 
 
-    public static OpenUp thepage() {
+    public static OpenUp thePage() {
         return Tasks.instrumented(OpenUp.class);
     }
+
 
     @Override
     public <T extends Actor> void performAs(T actor) {
