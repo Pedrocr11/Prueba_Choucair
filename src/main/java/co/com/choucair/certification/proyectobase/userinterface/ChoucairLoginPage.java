@@ -1,11 +1,10 @@
 package co.com.choucair.certification.proyectobase.userinterface;
 
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
 
-public class ChoucairLoginPage extends PageObject {
+public class ChoucairLoginPage {
     public static final Target LOGIN_BUTTON= Target.the("boton de inicio de sesion")
             .located(By.xpath("//div[@class='d-none d-lg-block']//strong[contains(text(),'Ingresar')]"));
     public static final Target INPUT_USER= Target.the("usuario").located(By.id("username"));
